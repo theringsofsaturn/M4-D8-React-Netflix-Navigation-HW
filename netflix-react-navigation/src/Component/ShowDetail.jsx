@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import MovieDetails from "./MovieDetails";
 
 const ShowDetail = (match) => {
   const [info, setInfo] = useState(null);
@@ -37,6 +38,7 @@ const ShowDetail = (match) => {
     };
     getMovieComments();
   }, [match.params.MovieID]);
+  return <div>{info && <MovieDetails movie={info} comments={comments} />}</div>;
 };
 
 export default ShowDetail;
