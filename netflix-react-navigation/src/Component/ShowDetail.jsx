@@ -23,7 +23,13 @@ const showDetail = (match) => {
       let id = match.params.MovieID;
       if (id) {
         let response = await fetch(
-          "https://striveschool-api.herokuapp.com/api/comments/" + id
+          "https://striveschool-api.herokuapp.com/api/comments/" + id,
+          {
+            headers: {
+              Authorization:
+                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGI4YThiODE2ZWY2MDAwMTVjZWQwNTUiLCJpYXQiOjE2MzIzMTU3ODksImV4cCI6MTYzMzUyNTM4OX0.5DMyLDm1BhaVjrBNllHevG_JWKkIIT8o2np1ZpuHMFw",
+            },
+          }
         );
         let movieInfo = await response.json();
         setInfo(movieInfo);
