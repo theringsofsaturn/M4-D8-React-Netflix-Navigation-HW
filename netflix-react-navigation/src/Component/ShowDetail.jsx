@@ -2,6 +2,7 @@ import { useEffect } from "react";
 
 const showDetail = () => {};
 const [info, setInfo] = useState(null);
+const [comments, setComments] = useState([]);
 
 useEffect(() => {
   const getMovieData = async () => {
