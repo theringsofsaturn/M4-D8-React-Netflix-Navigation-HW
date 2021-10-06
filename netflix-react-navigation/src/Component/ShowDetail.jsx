@@ -31,10 +31,10 @@ const showDetail = (match) => {
             },
           }
         );
-        let movieInfo = await response.json();
-        setInfo(movieInfo);
+        let moviComments = await response.json();
+        setComments(moviComments);
       }
     };
-    getMovieData();
+    getMovieComments();
   }, [match.params.MovieID]);
 };
