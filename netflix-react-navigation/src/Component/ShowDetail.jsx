@@ -17,4 +17,18 @@ const showDetail = (match) => {
     };
     getMovieData();
   }, [match.params.MovieID]);
+
+  useEffect(() => {
+    const getMovieComments = async () => {
+      let id = match.params.MovieID;
+      if (id) {
+        let response = await fetch(
+          "https://striveschool-api.herokuapp.com/api/comments/" + id
+        );
+        let movieInfo = await response.json();
+        setInfo(movieInfo);
+      }
+    };
+    getMovieData();
+  }, [match.params.MovieID]);
 };
