@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const showDetail = (match) => {
+const ShowDetail = (match) => {
   const [info, setInfo] = useState(null);
   const [comments, setComments] = useState([]);
 
@@ -38,3 +38,5 @@ const showDetail = (match) => {
     getMovieComments();
   }, [match.params.MovieID]);
 };
+
+export default ShowDetail;
