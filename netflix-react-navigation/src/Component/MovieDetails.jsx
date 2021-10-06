@@ -1,12 +1,10 @@
 const MovieDetails = ({ movie, comments }) => (
-  <div className="text-center text-white">
+  <div className="text-center">
     <h2>{movie.Title}</h2>
     <img src={movie.Poster} alt="movie poster" />
     <ul>
       {comments.map((comment) => (
-        <li className="my-3" key={comment._id}>
-          {comment.comment}
-        </li>
+        <li key={comment._id}>{comment.comment}</li>
       ))}
     </ul>
   </div>
