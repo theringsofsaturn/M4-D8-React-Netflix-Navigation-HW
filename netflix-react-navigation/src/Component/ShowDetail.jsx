@@ -15,4 +15,4 @@ useEffect(() => {
     }
   };
   getMovieData();
-}, []);
+}, [match.params.MovieID]);
