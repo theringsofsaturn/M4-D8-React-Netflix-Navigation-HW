@@ -11,6 +11,8 @@ useEffect(() => {
         "http://www.omdbapi.com/?i=tt3896198&apikey=c82e0eba" + id
       );
       let movieInfo = await response.json();
+      setInfo(movieInfo);
     }
   };
+  getMovieData();
 }, []);
