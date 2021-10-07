@@ -13,6 +13,7 @@ const ShowDetail = (match) => {
           "http://www.omdbapi.com/?i=tt3896198&apikey=c82e0eba" + id
         );
         let movieInfo = await response.json();
+        console.log("Data Movies", movieInfo);
         setInfo(movieInfo);
       }
     };
@@ -33,6 +34,7 @@ const ShowDetail = (match) => {
           }
         );
         let moviComments = await response.json();
+        console.log("Data Comments", moviComments);
         setComments(moviComments);
       }
     };
